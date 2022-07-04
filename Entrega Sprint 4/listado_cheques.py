@@ -1,22 +1,19 @@
 import csv
-
-
 def buscarPorDni():
 
-    dni = input("Ingrese su dni: ")
-
-    datos = csv.DictReader(open("test.csv"))
-
-    for linea in datos:
-        if linea["DNI"] == dni:
-            print(linea)
-        else:
-            print("El dni no se encuentra en nuestra base de datos")
-        break
 
 
+    with open("test.csv", newline='') as f:
+        reader = csv.DictReader(f)
+        dni = input("Ingrese su dni: ")
+        for linea in reader:
+            if dni == linea["DNI"]:
+                print(linea)
+            #else:
+                #print("Su DNI no esta en nuestra base de datos; Intente nuevamente.")  
+
+buscarPorDni()  
 buscarPorDni()
-buscarPorDni()
-buscarPorDni()
-
+buscarPorDni()      
+        
 
