@@ -4,7 +4,7 @@ with open('Entrega Sprint 4/test.csv', 'r') as datos:
 
     cheques = csv.DictReader(datos)
     
-    dni = input("Ingrese su dni: ")
+    dni = input("Para ver sus cheques, Ingrese su dni: ")
     
     for cheque in cheques:
 
