@@ -1,6 +1,6 @@
 import csv
 
-with open('test.csv', 'r') as datos:
+with open('Entrega Sprint 4/test.csv', 'r') as datos:
 
     cheques = csv.DictReader(datos)
     
